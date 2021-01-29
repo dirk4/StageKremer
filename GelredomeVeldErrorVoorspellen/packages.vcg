@@ -1,0 +1,89 @@
+graph:{
+  title:"packages"
+  layoutalgorithm:dfs
+  late_edge_labels:yes
+  port_sharing:no
+  manhattan_edges:yes
+  node: {title:"0"  label:"\fbController\fn"
+  shape:box
+}
+  node: {title:"1"  label:"\fbController.Azure\fn"
+  shape:box
+}
+  node: {title:"2"  label:"\fbController.Azure.IMLPredict\fn"
+  shape:box
+}
+  node: {title:"3"  label:"\fbController.Azure.MLPredict\fn"
+  shape:box
+}
+  node: {title:"4"  label:"\fbController.SciKitDynamic\fn"
+  shape:box
+}
+  node: {title:"5"  label:"\fbController.SciKitDynamic.DynamicCsvConverter\fn"
+  shape:box
+}
+  node: {title:"6"  label:"\fbController.SciKitDynamic.Predict\fn"
+  shape:box
+}
+  node: {title:"7"  label:"\fbController.SciKitDynamic.Train\fn"
+  shape:box
+}
+  node: {title:"8"  label:"\fbController.Scikit\fn"
+  shape:box
+}
+  node: {title:"9"  label:"\fbController.Scikit.IMLPredict\fn"
+  shape:box
+}
+  node: {title:"10"  label:"\fbController.Scikit.IMLTrain\fn"
+  shape:box
+}
+  node: {title:"11"  label:"\fbController.Scikit.MLPredict\fn"
+  shape:box
+}
+  node: {title:"12"  label:"\fbController.Scikit.MLTrain\fn"
+  shape:box
+}
+  node: {title:"13"  label:"\fbController.TensorFlow\fn"
+  shape:box
+}
+  node: {title:"14"  label:"\fbController.TensorFlow.IMLPredict\fn"
+  shape:box
+}
+  node: {title:"15"  label:"\fbController.TensorFlow.IMLTrain\fn"
+  shape:box
+}
+  node: {title:"16"  label:"\fbController.TensorFlow.MLPredict\fn"
+  shape:box
+}
+  node: {title:"17"  label:"\fbController.TensorFlow.MLTrain\fn"
+  shape:box
+}
+  edge: {sourcename:"3" targetname:"14"  arrowstyle:solid
+  backarrowstyle:none
+  backarrowsize:0
+}
+  edge: {sourcename:"3" targetname:"17"  arrowstyle:solid
+  backarrowstyle:none
+  backarrowsize:0
+}
+  edge: {sourcename:"7" targetname:"5"  arrowstyle:solid
+  backarrowstyle:none
+  backarrowsize:0
+}
+  edge: {sourcename:"11" targetname:"14"  arrowstyle:solid
+  backarrowstyle:none
+  backarrowsize:0
+}
+  edge: {sourcename:"12" targetname:"15"  arrowstyle:solid
+  backarrowstyle:none
+  backarrowsize:0
+}
+  edge: {sourcename:"16" targetname:"14"  arrowstyle:solid
+  backarrowstyle:none
+  backarrowsize:0
+}
+  edge: {sourcename:"17" targetname:"15"  arrowstyle:solid
+  backarrowstyle:none
+  backarrowsize:0
+}
+}

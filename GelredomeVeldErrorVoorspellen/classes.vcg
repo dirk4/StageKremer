@@ -1,0 +1,66 @@
+graph:{
+  title:"classes"
+  layoutalgorithm:dfs
+  late_edge_labels:yes
+  port_sharing:no
+  manhattan_edges:yes
+  node: {title:"0"  label:"\fbDynamicCsvConverter\fn\n\f_____________________\n\f08gripper_jack_nr\n\f08logging_gelredome\n\f08part\n\f08time_interval\n\f08type\n\f_____________________\n\f10add_to_be_predicted()\n\f10existence()\n\f10make_file()\n\f10prepare_dataframe()\n\f10print_info()\n\f10save_file()"
+  shape:box
+}
+  node: {title:"1"  label:"\fbIMLPredict\fn\n\f____________\n\f10load_data()\n\f10prediction()"
+  shape:box
+}
+  node: {title:"2"  label:"\fbIMLPredict\fn\n\f____________\n\f10load_model()\n\f10prediction()"
+  shape:box
+}
+  node: {title:"3"  label:"\fbIMLPredict\fn\n\f____________\n\f10load_model()\n\f10prediction()"
+  shape:box
+}
+  node: {title:"4"  label:"\fbIMLTrain\fn\n\f__________________\n\f10evaluate_dataset()\n\f10save_dataset()\n\f10train_model()"
+  shape:box
+}
+  node: {title:"5"  label:"\fbIMLTrain\fn\n\f__________________\n\f10build_model()\n\f10evaluate_dataset()\n\f10save_dataset()\n\f10train_model()"
+  shape:box
+}
+  node: {title:"6"  label:"\fbMLPredict\fn\n\f_______________________\n\f08data : NoneType\n\f08data : TextFileReader\n\f08model : NoneType\n\f08num\n\f08num : int\n\f08ya\n\f08ya : NoneType\n\f08ya1 : NoneType\n\f_______________________\n\f10load_model()\n\f10prediction()"
+  shape:box
+}
+  node: {title:"7"  label:"\fbMLPredict\fn\n\f_______________________\n\f08data : NoneType\n\f08data : TextFileReader\n\f08num : int\n\f08regressor : NoneType\n\f08regressor : NoneType\n\f_______________________\n\f10load_data()\n\f10load_model()\n\f10prediction()"
+  shape:box
+}
+  node: {title:"8"  label:"\fbMLPredict\fn\n\f_________________________________\n\f08data : NoneType\n\f08data : TextFileReader\n\f08model : NoneType\n\f08model : NoneType, AutoTrackable\n\f08num\n\f08num : int\n\f_________________________________\n\f10load_data()\n\f10load_model()\n\f10prediction()"
+  shape:box
+}
+  node: {title:"9"  label:"\fbMLTrain\fn\n\f_____________________________\n\f08dataframe\n\f08regressor : NoneType\n\f08regressor : VotingRegressor\n\f08x_test : NoneType\n\f08y_test : NoneType\n\f_____________________________\n\f10build_model()\n\f10evaluate_dataset()\n\f10save_dataset()\n\f10train_model()"
+  shape:box
+}
+  node: {title:"10"  label:"\fbMLTrain\fn\n\f____________________\n\f08dataframe\n\f08model : Sequential\n\f08test\n\f08test_dataset\n\f08test_labels\n\f08train\n\f08train_dataset\n\f08train_labels\n\f08val\n\f____________________\n\f10evaluate_dataset()\n\f10save_dataset()\n\f10train_model()"
+  shape:box
+}
+  node: {title:"11"  label:"\fbPredict\fn\n\f_________"
+  shape:box
+}
+  node: {title:"12"  label:"\fbTrain\fn\n\f_____________________________\n\f08dataframe : TextFileReader\n\f08location : NoneType\n\f08part : NoneType\n\f08regressor : NoneType\n\f08regressor : VotingRegressor\n\f08time_interval : NoneType\n\f08value_type : NoneType\n\f08x\n\f08x : NoneType\n\f08x_test : NoneType\n\f08x_train : NoneType\n\f08y\n\f08y : NoneType\n\f08y_test : NoneType\n\f08y_train : NoneType\n\f_____________________________\n\f10accuracy()\n\f10create_model()\n\f10define_training()\n\f10load_data()\n\f10print_training_info()\n\f10save()\n\f10test_prediction()\n\f10train_model()"
+  shape:box
+}
+  edge: {sourcename:"6" targetname:"3"  arrowstyle:solid
+  backarrowstyle:none
+  backarrowsize:10
+}
+  edge: {sourcename:"7" targetname:"3"  arrowstyle:solid
+  backarrowstyle:none
+  backarrowsize:10
+}
+  edge: {sourcename:"8" targetname:"3"  arrowstyle:solid
+  backarrowstyle:none
+  backarrowsize:10
+}
+  edge: {sourcename:"9" targetname:"5"  arrowstyle:solid
+  backarrowstyle:none
+  backarrowsize:10
+}
+  edge: {sourcename:"10" targetname:"5"  arrowstyle:solid
+  backarrowstyle:none
+  backarrowsize:10
+}
+}
