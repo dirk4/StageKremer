@@ -1,0 +1,79 @@
+<div class="container">
+  <div class="jumbotron">
+    <h1 class="display-3 text-center">Start Prediciting</h1>
+    <p class="text-center">
+      <!-- <small class="text-muted">This will predict a value based on a set datarow</small><br> -->
+      <small class="text-muted">GP1 ClaspPressure</small>
+      <br>
+    </p>
+    <div class="row mx-auto">
+      <button type="submit" (click)="testRun()" class="btn-lg btn-outline-info mx-auto">Test Run</button>
+      <button type="submit" (click)="stopRun()" class="btn-lg btn-outline-info mx-auto">Stop Run</button>
+    </div>
+
+
+    <div class="container">
+      <div class="row mt-4">
+        <div class="col">
+          <canvas #lineCanvas></canvas>
+          <h5 class="card-title text-center">Predictions</h5>
+        </div>
+        <!-- <div class="col">
+              <h2 class="display-3 text-left">Prediciton: {{prediction}}</h2>
+              <h3 class="display-3 text-left">Errors</h3>
+              <h4 class="display-1 text-left">Avg: {{errorAvg}}</h4>
+              <h4 class="display-1 text-left">Inc: {{errorInc}}</h4>
+              <h4 class="display-1 text-left">Dec: {{errorDec}}</h4>
+              <h4 class="display-1 text-left">Part: False</h4>
+            </div> -->
+
+      </div>
+    </div>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Time</th>
+          <th scope="col">Prediction</th>
+          <th scope="col">Avarage</th>
+          <th scope="col">Increase</th>
+          <th scope="col">Decrease</th>
+          <th scope="col">Part</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let prediction of history?.reverse() ">
+          <th scope="row">{{prediction.time}}</th>
+          <td>{{prediction.prediction}}</td>
+          <td> {{prediction.avg}}</td>
+          <td> {{prediction.inc}}</td>
+          <td> {{prediction.dec}}</td>
+          <td> {{prediction.part}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- 
+  <form [formGroup]="predictForm">
+    <table style="width:100%">
+      <tr>
+        <th>Gripperjack</th>
+        <th *ngFor="let part of parts">{{part}}</th>
+      </tr>
+      
+        <tr *ngFor="let gripperjack of gripperjacks">
+          <td> {{gripperjack}}</td>
+          <td *ngFor="let part of parts">
+            <input type="text" id=GP{{gripperjack}}_{{part}} name=GP{{gripperjack}}_{{part}} placeholder=GP{{gripperjack}}_{{part}} > 
+          </td>
+      </tr>
+      <button class="button" type="submit">Send</button>
+      </table>
+  </form> -->
+
+
+  </div>
+
+
+
+</div>

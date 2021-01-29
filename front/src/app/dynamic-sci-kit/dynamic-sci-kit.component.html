@@ -1,0 +1,89 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="../../../../favicon.ico">
+
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+
+  <!-- Custom styles for this template -->
+  <!-- <link href="narrow-jumbotron.css" rel="stylesheet"> -->
+</head>
+
+<body>
+  <div class="container">
+    <div class="jumbotron ">
+      <h1 class="display-3 text-center">Start Training</h1>
+      <p class="lead text-center">Select the components that need to be trained</p>
+      <p></p>
+      <form [formGroup]="contactForm" (ngSubmit)="submit(buttonType)">
+        <div class="form-group"></div>
+        <div class="row mx-auto">
+          <div class="col-sm-3">
+            <label>Choose a gripperjack </label>
+            <div class="form-group">
+              <select class="form-control" (change)="changeGripperjack($event)">
+                <option *ngFor="let gripperjack of gripperjacks" [ngValue]="gripperjack.id">{{gripperjack.name}}
+                </option>
+              </select>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="form-group" (change)="changePart($event)">
+              <label>Choose an part </label>
+              <select class="form-control">
+                <option *ngFor="let part of parts" [ngValue]="part.id">{{part.name}}</option>
+              </select></div>
+            <h3></h3>
+          </div>
+          <div class="col-sm-3">
+            <div class="form-group"><label>Choose a value type </label><select class="form-control"
+                (change)="changeValueType($event)">
+                <option *ngFor="let return of return_types" [ngValue]="return.id">{{return.name}}</option>
+              </select></div>
+            <h3></h3>
+          </div>
+          <div class="col-sm-3">
+            <div class="form-group" (change)="changeTimeInterval($event)"><label>Choose a time </label><select
+                class="form-control">
+                <option *ngFor="let time of time_frames" [ngValue]="time.id">{{time.name}}</option>
+              </select></div>
+          </div>
+          <button type="submit" (click)="submit('train')" class="btn-lg btn-outline-info mx-auto">Train</button>
+          <button type="submit" (click)="submit('graph')" class="btn-lg btn-outline-info mx-auto">Show graph</button>
+        </div>
+      </form>
+    </div>
+
+
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Mean Absolute Error</th>
+          <td>{{mae}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Mean Absolute Percentage Error</th>
+          <td>{{mape}}</td>
+        </tr>
+        <tr> </tr>
+      </tbody>
+    </table>
+
+    <div *ngIf="graphVisible">
+      <app-chart-maker></app-chart-maker>
+    </div>
+  </div>
+</body>

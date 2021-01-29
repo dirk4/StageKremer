@@ -1,0 +1,96 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf" crossorigin="anonymous"></script>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+
+
+<!-- <app-dynamic-sci-kit></app-dynamic-sci-kit> -->
+
+<!-- <app-data-dashboard></app-data-dashboard> -->
+
+
+<app-train-model></app-train-model>
+
+<app-predict-model></app-predict-model>
+<!-- 
+<div class="container ">
+  <h1 class="text-center mb-3">
+    Kremer Veld Voorspeller</h1>
+  <p class="text-center">Met deze applicatie is er de mogelijkheid om oude CSV bestanden te gebruiken om te kijken wat
+    er voorspelt zou worden met die data
+  </p>
+  <div class="col-md-4 col-xs-12">
+    <p class="">
+      <b>Doe een voorspelling met een model</b>
+    </p>
+    <label>
+      CSV file:
+      <input type="number" [formControl]="number" min="0" max="14">
+    </label>
+    <div class="d-flex align-items-center mb-3">
+      <div class="d-flex align-items-center mb-3">
+        <button type="button" class="btn btn-default" (click)="predictAzure()">
+          <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span>
+        </button>
+        <h5 class="font-weight-normal">
+          Voorspel met AzureML</h5>
+      </div>
+    </div>
+    <div class="d-flex align-items-center mb-3">
+      <div class="d-flex align-items-center mb-3">
+        <button type="button" class="btn btn-default" (click)="predictTensor()">
+          <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span>
+        </button>
+        <h5 class="font-weight-normal">
+          Voorspel met Tensorflow</h5>
+      </div>
+    </div>
+    <div class="d-flex align-items-center mb-3">
+      <div class="d-flex align-items-center mb-3">
+        <button type="button" class="btn btn-default" (click)="predictSciKit()">
+          <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span>
+        </button>
+        <h5 class="font-weight-normal">
+          Voorspel met Sci-Kit</h5>
+      </div>
+    </div>
+
+    <p class="">
+      <b>Train een model</b>
+    </p>
+
+    <div class="d-flex align-items-center mb-3">
+      <div class="d-flex align-items-center mb-3">
+        <button type="button" class="btn btn-default" (click)="trainTensor()">
+          <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span>
+        </button>
+        <h5 class="font-weight-normal">
+          Train het Tensorflow model</h5>
+      </div>
+    </div>
+    <div class="d-flex align-items-center mb-3">
+      <div class="d-flex align-items-center mb-3">
+        <button type="button" class="btn btn-default" (click)="trainSciKit()">
+          <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span>
+        </button>
+        <h5 class="font-weight-normal">
+          Train het Sci-Kit model</h5>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12 col-xs-12">
+    <div class="jumbotron">
+      <H2>
+        {{prediction}}
+      </H2>
+      <hr class="my-4">
+      <p class="font-weight-light">
+        Disclamer: De applicatie zal nooit 100% correct zijn.</p>
+    </div>
+
+  </div>
+
+</div> -->
+
+<router-outlet></router-outlet>
